@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.wrap {
+	border: 1px solid black;
+	width: 400px;
+	height: 400px;
+	position: relative;
+	margin: 100px auto;
+	
+}
+
+.left {
+	border: 2px solid black;
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	z-index: 3
+}
+
+.cen {
+	border: 2px solid black;
+	width: 200px;
+	height: 200px;
+	background-color: green;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	z-index: 2
+}
+
+.right {
+	border: 2px solid black;
+	width: 200px;
+	height: 200px;
+	background-color: blue;
+	position: absolute;
+	top: 150px;
+	left: 150px;
+	z-index: 1
+}
+
+.wrap2{
+	position: relative;
+	width: 600px;
+	margin: 0 auto;
+}
+img{
+	position: absolute;
+	top: 0px;
+	z-index: -1;
+}
+p{
+	width: 100%;
+}
+</style>
+</head>
+<body>
+	<div class=wrap>
+		<div class="left">red</div>
+		<div class="cen"></div>
+		<div class="right"></div>
+	</div>
+	<hr>
+	<div class="wrap2">
+		<h2>한국ICT인재개발원</h2>
+		<p>한국ICT인재개발원한국ICT인재개발원한국ICT인재개발원한국ICT인재개발원한국ICT인재개발원한국ICT인재개발원
+			한국ICT인재개발원한국ICT인재개발원한국ICT인재개발원한국ICT인재개발원한국ICT인재개발원한국ICT인재개발원
+			한국ICT인재개발원한국ICT인재개발원한국ICT인재개발원한국ICT인재개발원한국ICT인재개발원한국ICT인재개발원</p>
+		<img alt="장미" src="../images/rose.jpg">
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
