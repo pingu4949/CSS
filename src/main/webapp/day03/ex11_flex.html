@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+section {
+	width: 100%;
+	background-color: lightcyan;
+	display: flex;
+}
+
+section article {
+	width: 400px;
+	box-sizing: border-box;
+	background-color: aqua;
+	border: 1px solid black;
+	font-size: 50px;
+	color: white;
+	display: flex;
+}
+/* /* 여백 축소하기 : 속상값이 클수록 */
+section article:nth-of-type(1) {
+	flex-shrink: 1
+}
+
+section article:nth-of-type(2) {
+	flex-shrink: 2
+}
+
+section article:nth-of-type(3) {
+	flex-shrink: 3
+}
+ */
+/* flex - 전 */
+section article:nth-of-type(1) {
+	flex: 1
+}
+
+section article:nth-of-type(2) {
+	flex: 2
+}
+
+section article:nth-of-type(3) {
+	flex: 3
+}
+</style>
+</head>
+<body>
+	<section>
+		<article>FLEX SHRINK</article>
+		<article>FLEX SHRINK</article>
+		<article>FLEX SHRINK</article>
+	</section>
+</body>
+</html>

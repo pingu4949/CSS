@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+section {
+	width: 100%;
+	background-color: lightcyan;
+	display: flex;
+	justify-content: center; /* 도형 가운데정렬 */
+}
+
+section article {
+	width: 100px;
+	height: 100px;
+	background-color: aqua;
+	border: 1px solid black;
+	font-size: 50px;
+	color: white;
+	display: flex; 
+	justify-content: center; /* 글자가운데정렬 */
+	align-items: center; /* 상하 가운데정렬 */
+}
+
+article:nth-of-type(1) {
+	order: 3;
+}
+article:nth-of-type(2) {
+	order: 2;
+}
+article:nth-of-type(3) {
+	order: 1;
+}
+</style>
+</head>
+<body>
+	<section>
+		<article>1</article>
+		<article>2</article>
+		<article>3</article>
+	</section>
+</body>
+</html>

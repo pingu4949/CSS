@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	*{
+		padding: 10px;
+		margin: 0px;
+	}
+	#wrapper{
+		display: grid; /* 그리드 컨테이너 지정 */
+/* 		grid-template-columns: 200px 200px 200px; /* 너비 200px인게 3개 */
+		/* grid-template-columns: 1fr 1fr 1fr; /* 전체화면 같은너비 3개 생성 */
+		/* grid-template-columns: 1fr 3fr 1fr; */ /* 전체화면 너비 중 2 : 1 : 2 */
+		grid-template-columns: repeat(3,1fr); /* 3개를 같은너비로 1 : 1 : 1 */
+		grid-template-rows: 200px; /* 줄 높이 200px */ 
+		grid-gap: 20px 50px ;      /* 줄 간격 20px 칸 간격 50px */
+		
+	}
+	.items{
+		background-color: #eee;
+	}
+	.items:nth-of-type(odd) {background-color: #bbb;}
+	.items:nth-of-type(even) {background-color: #3e3e;}
+	
+</style>
+</head>
+<body>
+<!-- 
+	부모 컨테이너에게 display:grid 또는 inline-grild 라고 지정
+		grid : 자식박스(항목)을 블록, inline-grild : 자식박스(항목)을 인라인
+		
+	자식 항목들을 grid cell이라고 한다.
+		DB랑 반대
+		가로지정 - grid-template-columns
+		세로지정 - grid-template-row
+		사용자지정 - grid-template-areas
+		
+	grid-gap : grid-column-gap, grid-row-gap (그리드와 그리드사이에 있는 여백) 
+	
+	그리드 영역
+	grid-column-start;
+	grid-column-end;
+	grid-row-start;
+	grid-row-end;
+	grid-area;
+ -->
+   <div id="wrapper">
+    <div class="items">1.Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, reprehenderit.Lorem ipsum dolor, sit amet consectetur adipisicing elit. </div>
+    <div class="items">2.Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit</div>
+    <div class="items">3.Lorem ipsum dolor sit amet.Lorem ipsum dolor, sit amet consectetur adipisicing elit</div>
+    <div class="items">4.Lorem ipsum dolor sit.Lorem ipsum dolor, sit amet consectetur adipisicing elit</div>
+    <div class="items">5.Lorem, ipsum dolor.</div>
+  </div>
+</body>
+</html>
