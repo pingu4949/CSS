@@ -1,0 +1,117 @@
+@charset "UTF-8";
+*{
+	box-sizing: border-box;
+}
+.header{
+	/* 위에 고정 - 스크롤 되었을 때 계속 보이도록 한다는 뜻. */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: white;
+	/* 밑줄처럼 보이는게 쉐도우임 */
+	box-shadow: 0 0 3px black;
+	/* 숫자의 의미가 없다 5줘도 되고 10줘도됨 */
+	z-index: 20;
+	
+}
+.header_wrapper{
+	display: flex;
+	/* 여유공간있는건 around 없는건 between은 시작과끝에 여유공간이 없다. */
+	/* 가로축 정렬 */
+	justify-content: space-between;
+	/* 교차축 정렬 */
+	align-items: center;
+	height: 60px;
+	padding: 0 16px;
+		
+}
+
+.header_start{
+	/* 글자 세로 정렬 */
+	height: 40px;
+	line-height: 40px;
+	
+}
+
+.header_hamburger{
+	/* 테두리 없애기 */
+	border: none;
+	/* 버튼 배경색을 투명으로 */
+	background-color: transparent;
+	/* 크기 키우기 rem = 16px 1.5 = 24px */
+	font-size: 1.5rem;
+}
+
+.header_title{
+	/* 폰트사이즈 조절 */
+	font-size: 1.2rem;
+	/* 왼쪽 여백 6px 주기 */
+	margin-left: 6px;
+}
+
+.header_center{
+	/* 부모 % 따라간다. */
+	width: 50%;
+}
+
+.header_from{
+	
+	display: flex;
+	/* 최대넓이가 100%이니깐 부모넓이 넘어가지말라는뜻 */
+	max-width: 100%;
+}
+
+.heaer_input_text{
+	/* 화면을 늘릴때 calc이렇게주면 알아서 자기가 계산해준다 */
+	width: calc(100% - 60px);
+	height: 40px;
+	padding: 0 5px;
+	border: 1px solid #8f8f8f;
+	border-right: none;
+	border-radius: 5px 0 0 5px;
+	margin: 0px;
+}
+.heaer_input_button{
+	width: 60px;
+	/* height: calc(100% - 60px); */
+	height: 40px;
+	border: 1px solid #8f8f8f;
+	border-left: none;
+	border-radius: 0 5px 5px 0;
+	margin: 0px;
+}
+.header_end{
+	display: flex;
+}
+/* 햄버거 버튼 참조 */
+.header_search{
+	display: none;
+	margin-right: 5px;
+	border: none;
+	/* 투명 */
+	background-color: transparent;
+	font-size: 1.5rem;
+	
+}
+
+.header_profile{
+ 	width: 40px;
+ 	height: 40px;
+ 	border: 1px solid #eaeaea;
+ 	border-radius: 50%;/* 
+ 	background-color: lightblue; */
+ 	background-image: url(profile-m.png);
+ 	background-size: 40px 40px;
+}
+/* 800px 이하이면 로고가 없어진다.*/
+@media screen and (max-width:800px) {
+	.header_title{display: none;}
+}
+
+/* 460px 이하이면 로고가 없어진다.*/
+@media screen and (max-width:460px){
+	.header_search{display: none;}
+	.header_center{display: block;}
+}
+
